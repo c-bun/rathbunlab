@@ -1,0 +1,11 @@
+{% set section = site.get('sections/members') %}
+<div class="section" id="#{{ section._id }}">
+    <h2>{{ section.title }}</h2>
+    {{ section.body }}
+    {% for child in section.children.include_hidden(true).include_undiscoverable(true) %}
+    <h4>{{ child.title }}</h4>
+    {{ child.body }}
+    {% set image = child.attachments.images.first() %}
+    <img src="{{ image.thumbnail(320)|url }}" alt="" />
+    {% endfor %}
+  </div>

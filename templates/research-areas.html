@@ -1,0 +1,9 @@
+{% set section = site.get('sections/research-areas') %}
+<div class="section" id="#{{ section }}">
+    <h1>{{ section.title }}</h1>
+    {{ section.body }}
+    {% for child in section.children.include_hidden(true).include_undiscoverable(true) %}
+    <h3>{{ child.title }}</h3>
+    {{ child.body }}
+    {% endfor %}
+  </div>
