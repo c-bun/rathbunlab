@@ -1,3 +1,9 @@
-title: Machines
+title: Machine Learning
 ---
-body: Brrr.
+body: 
+
+We use machine learning (essentially fancy stats) to 
+gain insight into the fundamental chemical interactions 
+in our enzymes and proteins. The protein-binder interaction data 
+that we gather in the lab is analyzed is modeled in [Rosetta](https://www.rosettacommons.org) and 
+analyzed with python!

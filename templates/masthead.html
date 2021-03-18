@@ -2,9 +2,6 @@
 {% set image = this.attachments.images.first() %}
 <header class="masthead bg-primary text-white text-center" id="{{ this._id }}">
     <div class="container d-flex align-items-center flex-column">
-        {% if image %}
-        <img class="masthead-avatar mb-5" src="{{ image.thumbnail(500)|url }}" alt="" />
-        {% endif %}
         <!-- Masthead Heading-->
         <h1 class="masthead-heading text-uppercase mb-0">{{ this.title }}</h1>
         <!-- Icon Divider-->
@@ -12,12 +9,17 @@
             <div class="divider-custom-line"></div>
         </div>
         <!-- Masthead Subheading-->
-        <p class="masthead-subheading font-weight-light mb-0">{{ this.text }}</p>
-    </div>
-    <div class="text-center mt-4">
-        <a class="btn btn-l btn-outline-light" href="">
+        <p class="masthead-subheading font-weight-light mb-0">{{ this.subtitle }}</p>
+        {% if image %}
+        <img class="masthead-avatar mb-5" src="{{ image.thumbnail(500)|url }}" alt="" />
+        {% endif %}
+        {{ this.description }}
+        <a class="btn btn-l btn-outline-light" href="{{ this.publink }}">
             <i class="fa fa-book-open mr-2" aria-hidden="true"></i>
             Our Publications
         </a>
     </div>
+    
+            
+    
 </header>
