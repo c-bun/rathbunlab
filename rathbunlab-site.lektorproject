@@ -1,2 +1,8 @@
 [project]
 name = rathbunlab-site
+
+[servers.ghpages]
+name = GitHub Pages rathbunlab-site
+target = ghpages+https://c-bun:54232c06504ace81367f1e7eebc611b73e49dc94@c-bun/rathbunlab-site
+enabled = yes
+default = yes
