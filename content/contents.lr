@@ -1,15 +1,16 @@
 _model: index
 ---
-title: Rathbun Lab
+title: Rathbun Lab @
+---
+navtitle: Rathbun Lab @ Dickinson
+---
+subtitle: #### Bioluminescence – Protein Engineering – Machine Learning
+---
+description:
 ---
 publink: https://pubmed.ncbi.nlm.nih.gov/?term=Colin+Rathbun
 ---
-contact:
-
-For inquiries about joining the lab, fill out the form above. 
-For all other inquiries: [rathbunc@dickinson.edu](mailto:rathbunc@dickinson.edu)
----
-copyright: Copyright © Rathbun Lab 2021
+copyright: Copyright © Rathbun Lab 2022
 ---
 twitter: https://twitter.com
 ---
@@ -18,14 +19,12 @@ github: https://github.com/rathbun-lab
 location:
 
 Dickinson College  
-Rector XXXXX (office)  
-Rector XXXXX (lab)  
+James XXXXX (office)  
+James XXXXX (lab)  
 
----
-subtitle: #### Bioluminescence – Protein Engineering – Machine Learning
 ---
 website-design: This site was coded by Prof. Rathbun in [Lektor](https://www.getlektor.com). Inspired by the [Freelancer theme](https://startbootstrap.com/theme/freelancer).
 ---
 website: This site was coded by Prof. Rathbun in [Lektor](https://www.getlektor.com). Inspired by the [Freelancer theme](https://startbootstrap.com/theme/freelancer).
 ---
-description: Some description here. Not sure if this is something I'll use.
+
