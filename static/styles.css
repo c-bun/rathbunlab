@@ -11,8 +11,10 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
-  --highlight-color: #ed6363;
-
+  --highlight-color: #dc3545;
+  --background-primary-color: #343a40;
+  --background-secondary-color: #282a2c;
+  --highlight-transparent-color: rgba(203, 68, 74, 0.7);
 
   --blue: #007bff;
   --indigo: #6610f2;
@@ -27,7 +29,7 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #1abc9c;
+  --primary: #343a40;
   --secondary: #2c3e50;
   --success: #28a745;
   --info: #17a2b8;
@@ -6077,7 +6079,7 @@ a.close.disabled {
 
 .bg-primary {
   /*background-color: #000000 !important;*/
-  background-color: #003545 !important;
+  background-color: var(--background-primary-color) !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -6088,7 +6090,7 @@ button.bg-primary:focus {
 
 .bg-secondary {
   /*background-color: #1d4b39 !important;*/
-  background-color: #3c6562 !important;
+  background-color: var(--background-secondary-color) !important;
 }
 
 a.bg-secondary:hover, a.bg-secondary:focus,
@@ -10151,6 +10153,15 @@ h3 {
   border-radius: 0.5rem;
   overflow: hidden;
 }
+
+.member {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  max-width: 25rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
 .portfolio .portfolio-item .portfolio-item-caption {
   position: absolute;
   top: 0;
@@ -10158,7 +10169,7 @@ h3 {
   transition: all 0.2s ease-in-out;
   opacity: 0;
   /*background-color: rgba(26, 188, 156, 0.9);*/
-  background-color: rgba(237, 99, 99, 0.9);
+  background-color: var(--highlight-transparent-color);
 }
 .portfolio .portfolio-item .portfolio-item-caption:hover {
   opacity: 1;
