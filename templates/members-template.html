@@ -26,6 +26,9 @@
                     {% endif %}
                     <h4>{{ area.title }}</h4>
                     {{ area.body }}
+                    {% if area.project %}
+                    <b>Current Project: </b>{{ area.project }}
+                    {% endif %}
                 </div>
             </div>
             <!-- {{ area.title }}: Thing that pops up when panel is clicked -->
