@@ -24,7 +24,16 @@
                     {% if image %}
                     <img class="img-fluid rounded-circle" src="{{ image.thumbnail(230)|url }}" alt="" />
                     {% endif %}
-                    <h4>{{ member.title }}</h4>
+                    {% if member.pronouns %}
+                    <div class='member-title'>
+                        <h4>{{ member.title }} </h4>
+                        <h6>[{{ member.pronouns }}]</h6>
+                    </div>
+                    {% else %}
+                    <div class='member-title'>
+                        <h4>{{ member.title }} </h4>
+                    </div>
+                    {% endif %}
                     {{ member.body }}
                     {% if member.project %}
                     <b>Current Project: </b>{{ member.project }}
