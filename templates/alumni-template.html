@@ -41,7 +41,12 @@
                     {% endif %}
                     {{ member.body }}
                     {% if member.project %}
-                    <b>Current Position: </b>{{ member.project }}
+                    <p>
+                    <b>Rathbun Lab Project: </b>{{ member.project }}
+                    </p>
+                    {% endif %}
+                    {% if member.current_position %}
+                    <b>Current Position: </b>{{ member.current_position }}
                     {% endif %}
                     {% if member.links %}
                     {{ member.links }}
