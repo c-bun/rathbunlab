@@ -1,17 +1,22 @@
 {% set section = site.get('sections/members') %}
 {% set members = section.children.include_hidden(true).include_undiscoverable(true) %}
+{# get members that are alumni #}
+{# {% set members = members|selectattr("alumni") %} #}
+
 <section class="page-section portfolio" id="{{ section._id }}">
-    <div class="container">
-        <!-- Portfolio Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">{{ section.title }}</h2>
-        <!-- Icon Divider-->
-        <div class="divider-custom">
-            <div class="divider-custom-line"></div>
-        </div>
+
+    <div class="row justify-content-center">
+        <a class="btn btn-l btn-outline-dark" data-toggle="collapse" data-target="#alumniCollapse" aria-expanded="true" aria-controls="alumniCollapse">
+            <i class="fa" aria-hidden="true"></i>
+            Lab Alumni
+        </a>
+    </div>
+
+    <div class="container collapse" id="alumniCollapse">
         <!-- Portfolio Grid Items-->
         <div class="row justify-content-center">
             <!-- Portfolio Items-->
-            {% for member in members.order_by('-year')|selectattr("alumni", "undefined") %}
+            {% for member in members.order_by('-year')|selectattr("alumni") %}
             <!-- {{ member.title }} -->
             <div class="col-md-6 col-lg-4 mb-5">
                 <!-- <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#{{ member._id }}"> -->
@@ -36,7 +41,12 @@
                     {% endif %}
                     {{ member.body }}
                     {% if member.project %}
-                    <b>Current Project: </b>{{ member.project }}
+                    <p>
+                    <b>Rathbun Lab Project: </b>{{ member.project }}
+                    </p>
+                    {% endif %}
+                    {% if member.current_position %}
+                    <b>Current Position: </b>{{ member.current_position }}
                     {% endif %}
                     {% if member.links %}
                     {{ member.links }}

@@ -2938,6 +2938,14 @@ input[type=button].btn-block {
   opacity: 0;
 }
 
+[data-toggle="collapse"] .fa:before {  
+  content: "\f139";
+}
+
+[data-toggle="collapse"].collapsed .fa:before {
+  content: "\f13a";
+}
+
 .collapse:not(.show) {
   display: none;
 }
@@ -7615,7 +7623,7 @@ button.bg-dark:focus {
 
 .mb-5,
 .my-5 {
-  margin-bottom: 3rem !important;
+  margin-bottom: 0rem !important;
 }
 
 .ml-5,
@@ -9985,7 +9993,7 @@ h3 {
   }
 }
 .page-section {
-  padding: 6rem 0;
+  padding: 2rem 0;
 }
 .page-section .page-section-heading {
   font-size: 2.25rem;
