@@ -18,41 +18,7 @@
             <!-- Portfolio Items-->
             {% for member in members.order_by('-year')|selectattr("alumni") %}
             <!-- {{ member.title }} -->
-            <div class="col-md-6 col-lg-4 mb-5">
-                <!-- <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#{{ member._id }}"> -->
-                <div class="member">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white"><i
-                                class="fas fa-plus fa-3x"></i></div>
-                    </div>
-                    {% set image = member.attachments.images.first() %}
-                    {% if image %}
-                    <img class="img-fluid rounded-circle" src="{{ image.thumbnail(230)|url }}" alt="" />
-                    {% endif %}
-                    {% if member.pronouns %}
-                    <div class='member-title'>
-                        <h4>{{ member.title }} </h4>
-                        <h6>[{{ member.pronouns }}]</h6>
-                    </div>
-                    {% else %}
-                    <div class='member-title'>
-                        <h4>{{ member.title }} </h4>
-                    </div>
-                    {% endif %}
-                    {{ member.body }}
-                    {% if member.project %}
-                    <p>
-                    <b>Rathbun Lab Project: </b>{{ member.project }}
-                    </p>
-                    {% endif %}
-                    {% if member.current_position %}
-                    <b>Current Position: </b>{{ member.current_position }}
-                    {% endif %}
-                    {% if member.links %}
-                    {{ member.links }}
-                    {% endif %}
-                </div>
-            </div>
+            {% include "people.html" %}
             <!-- {{ member.title }}: Thing that pops up when panel is clicked -->
 
             {% endfor %}

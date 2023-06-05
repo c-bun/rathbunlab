@@ -1,0 +1,26 @@
+
+            <div class="col-md-6 col-lg-4 mb-5">
+                <!-- <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#{{ member._id }}"> -->
+                <div class="member">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white"><i
+                                class="fas fa-plus fa-3x"></i></div>
+                    </div>
+                    {% set image = member.attachments.images.first() %}
+                    {% if image %}
+                    <img class="img-fluid rounded-circle" src="{{ image.thumbnail(230)|url }}" alt="" />
+                    {% endif %}
+                    <div class='member-title'>
+                        <h4>{{ member.title }} </h4>
+                        {% if member.pronouns %}
+                        <h6>{{ member.pronouns }}{% endif %}{% if member.year > 2012 %} | Class of {{ member.year }}{% endif %}</h6>
+                    </div>
+                    {{ member.body }}
+                    {% if member.project %}
+                    <b>Current Project: </b>{{ member.project }}
+                    {% endif %}
+                    {% if member.links %}
+                    {{ member.links }}
+                    {% endif %}
+                </div>
+            </div>
