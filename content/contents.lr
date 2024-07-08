@@ -2,7 +2,7 @@ _model: index
 ---
 title: Rathbun Lab @
 ---
-navtitle: Rathbun Lab @ Dickinson
+navtitle: Rathbun Lab @ CMC
 ---
 subtitle: #### Bioluminescence – Protein Engineering – Machine Learning
 ---
@@ -10,7 +10,7 @@ description:
 ---
 publink: https://pubmed.ncbi.nlm.nih.gov/?term=Colin+Rathbun
 ---
-copyright: Copyright © Rathbun Lab 2022
+copyright: Copyright © Rathbun Lab 2024
 ---
 twitter: https://twitter.com
 ---
@@ -18,9 +18,7 @@ github: https://github.com/rathbun-lab
 ---
 location:
 
-Dickinson College  
-James 2227 (office)  
-James 2229 (lab)  
+TBD!  
 
 ---
 website-design: This site was coded by Prof. Rathbun in [Lektor](https://www.getlektor.com). Inspired by the [Freelancer theme](https://startbootstrap.com/theme/freelancer).

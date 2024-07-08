@@ -11,9 +11,11 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
-  --highlight-color: #dc3545;
-  --background-primary-color: #343a40;
-  --background-secondary-color: #282a2c;
+  /* --highlight-color: #dc3545; */
+  --highlight-color: rgb(152,26,49);
+  /* --background-primary-color: #343a40; */
+  --background-primary-color: rgb(83,81,80);
+  --background-secondary-color: rgb(35,31,32);
   --highlight-transparent-color: rgba(203, 68, 74, 0.7);
 
   --blue: #007bff;
