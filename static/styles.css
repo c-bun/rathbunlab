@@ -11,9 +11,11 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
-  --highlight-color: #dc3545;
-  --background-primary-color: #343a40;
-  --background-secondary-color: #282a2c;
+  /* --highlight-color: #dc3545; */
+  --highlight-color: rgb(152,26,49);
+  /* --background-primary-color: #343a40; */
+  --background-primary-color: rgb(83,81,80);
+  --background-secondary-color: rgb(35,31,32);
   --highlight-transparent-color: rgba(203, 68, 74, 0.7);
 
   --blue: #007bff;
@@ -2936,6 +2938,14 @@ input[type=button].btn-block {
 }
 .fade:not(.show) {
   opacity: 0;
+}
+
+[data-toggle="collapse"] .fa:before {  
+  content: "\f139";
+}
+
+[data-toggle="collapse"].collapsed .fa:before {
+  content: "\f13a";
 }
 
 .collapse:not(.show) {
@@ -7615,7 +7625,7 @@ button.bg-dark:focus {
 
 .mb-5,
 .my-5 {
-  margin-bottom: 3rem !important;
+  margin-bottom: 0rem !important;
 }
 
 .ml-5,
@@ -9985,7 +9995,7 @@ h3 {
   }
 }
 .page-section {
-  padding: 6rem 0;
+  padding: 2rem 0;
 }
 .page-section .page-section-heading {
   font-size: 2.25rem;
@@ -10146,31 +10156,40 @@ h3 {
   }
 }
 .portfolio .portfolio-item {
-  cursor: pointer;
+  /* cursor: pointer; */
   position: relative;
   display: block;
   max-width: 25rem;
   border-radius: 0.5rem;
+  /* border: 2px solid #000;
+  padding: 10px;
+  top: 0; */
   overflow: hidden;
 }
 
+.text-border {
+  border: 2px solid #000;
+  padding: 10px;
+  border-radius: 0.5rem;
+}
+
 .member {
-  cursor: pointer;
+  /* cursor: pointer; */
   position: relative;
   display: block;
   max-width: 25rem;
   border-radius: 0.5rem;
   overflow: hidden;
 }
-.portfolio .portfolio-item .portfolio-item-caption {
+/* .portfolio .portfolio-item .portfolio-item-caption {
   position: absolute;
   top: 0;
   left: 0;
   transition: all 0.2s ease-in-out;
   opacity: 0;
-  /*background-color: rgba(26, 188, 156, 0.9);*/
+  background-color: rgba(26, 188, 156, 0.9);
   background-color: var(--highlight-transparent-color);
-}
+} */
 .portfolio .portfolio-item .portfolio-item-caption:hover {
   opacity: 1;
 }
