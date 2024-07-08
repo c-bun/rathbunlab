@@ -1,9 +1,11 @@
-title: Machine Learning
+title: Optical control of antibiotic resistance
 ---
 body: 
 
-We use machine learning (essentially fancy stats) to 
-gain insight into the fundamental chemical interactions 
-in our enzymes and proteins. The protein-binder interaction data 
-that we gather in the lab is analyzed is modeled in [Rosetta](https://www.rosettacommons.org) and 
-analyzed with python!
+We believe in working smarter, not harder, so we are developing new
+ways to evolve new bioluminescent tools.
+
+Currently, we are interested in optical control of antibiotic resistance. 
+We have developed protein-based sensors that tie survival of bacterial cells to the presence of blue light.
+This will allow us to evolve brighter bioluminescent probes because only 
+the brightest mutants will survive.

@@ -10154,12 +10154,21 @@ h3 {
   }
 }
 .portfolio .portfolio-item {
-  cursor: pointer;
+  /* cursor: pointer; */
   position: relative;
   display: block;
   max-width: 25rem;
   border-radius: 0.5rem;
+  /* border: 2px solid #000;
+  padding: 10px;
+  top: 0; */
   overflow: hidden;
+}
+
+.text-border {
+  border: 2px solid #000;
+  padding: 10px;
+  border-radius: 0.5rem;
 }
 
 .member {
@@ -10170,15 +10179,15 @@ h3 {
   border-radius: 0.5rem;
   overflow: hidden;
 }
-.portfolio .portfolio-item .portfolio-item-caption {
+/* .portfolio .portfolio-item .portfolio-item-caption {
   position: absolute;
   top: 0;
   left: 0;
   transition: all 0.2s ease-in-out;
   opacity: 0;
-  /*background-color: rgba(26, 188, 156, 0.9);*/
+  background-color: rgba(26, 188, 156, 0.9);
   background-color: var(--highlight-transparent-color);
-}
+} */
 .portfolio .portfolio-item .portfolio-item-caption:hover {
   opacity: 1;
 }
