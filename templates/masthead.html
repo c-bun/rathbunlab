@@ -3,18 +3,18 @@
 <header class="masthead bg-primary text-white text-center" id="{{ this._id }}">
     <div class="container d-flex align-items-center flex-column">
         <!-- Masthead Heading-->
-        <h1 class=" text-uppercase mb-0">{{ this.title }}  <img class="masthead-img" src="{{ this.attachments.get("logo.png").thumbnail(300)|url }}"></h1>
+        <h1 class=" text-uppercase mb-0">{{ this.title }}  <img class="masthead-img" src="{{ this.attachments.get("logo.png").thumbnail(350)|url }}"></h1>
         <!-- <div class="divider-custom divider-light">
         </div>
         <img class="masthead-img" src="{{ this.attachments.get("logo.png").thumbnail(300)|url }}"> -->
         <!-- Icon Divider-->
         <div class="divider-custom divider-light">
         </div>
+        {% if image %}
+        <img class="masthead-img mb-5" src="{{ image.thumbnail(400)|url }}" alt="" />
+        {% endif %}
         <!-- Masthead Subheading-->
         <p class="masthead-subheading font-weight-light mb-0">{{ this.subtitle }}</p>
-        {% if image %}
-        <img class="masthead-avatar mb-5" src="{{ image.thumbnail(500)|url }}" alt="" />
-        {% endif %}
         {{ this.description }}
         <a class="btn btn-l btn-outline-light" href="{{ this.publink }}" target="_blank">
             <i class="fa fa-book-open mr-2" aria-hidden="true"></i>
