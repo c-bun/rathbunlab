@@ -11,7 +11,7 @@
         <!-- Portfolio Grid Items-->
         <div class="row justify-content-center">
             <!-- Portfolio Items-->
-            {% for member in members.order_by('-year')|selectattr("alumni", "undefined") %}
+            {% for member in members.order_by('-year')|selectattr("alumni", "false") %}
             
             {% include "people.html" %}
 

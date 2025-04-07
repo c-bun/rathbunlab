@@ -12,11 +12,13 @@
             {{ section.body }}
         </div>
         <!-- About Section Button-->
+         {% if section.link %}
         <div class="text-center mt-4">
             <a class="btn btn-xl btn-outline-dark" href="{{ section.link }}" target="_blank">
                 <i class="fa fa-paper-plane-o mr-2" aria-hidden="true"></i>
                 Apply Here!
             </a>
         </div>
+        {% endif %}
     </div>
 </section>
