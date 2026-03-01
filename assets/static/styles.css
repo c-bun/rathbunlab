@@ -10278,3 +10278,11 @@ form .row:first-child .floating-label-form-group {
 .copyright {
   background-color: #1a252f;
 }
+/* Publications section */
+.pub-card {
+    background-color: #f8f9fa;
+    transition: box-shadow 0.2s ease;
+}
+.pub-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}

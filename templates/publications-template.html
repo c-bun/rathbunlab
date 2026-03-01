@@ -1,0 +1,37 @@
+{% set section = site.get('sections/publications') %}
+{% set pubs = section.children.include_hidden(true).include_undiscoverable(true) %}
+<section class="page-section" id="{{ section._id }}">
+    <div class="container">
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">{{ section.title }}</h2>
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+        </div>
+        <div class="row justify-content-center">
+            {% for pub in pubs.order_by('-year') %}
+            <div class="col-md-6 col-lg-4 mb-5">
+                <div class="pub-card h-100 d-flex flex-column p-3 border rounded">
+                    {% set toc = pub.attachments.images.first() %}
+                    {% if toc %}
+                    <img class="img-fluid mb-3" src="{{ toc.thumbnail(400)|url }}" alt="Table of contents image for {{ pub.title }}" />
+                    {% endif %}
+                    <h5 class="text-uppercase">{{ pub.title }}</h5>
+                    <p class="text-muted mb-1"><em>{{ pub.authors }}</em></p>
+                    <p class="mb-3"><strong>{{ pub.journal }}</strong> ({{ pub.year }})</p>
+                    {% if pub.doi %}
+                    <div class="mt-auto">
+                        <a class="btn btn-sm btn-outline-dark" href="{{ pub.doi }}" target="_blank">
+                            <i class="fa fa-external-link-alt mr-1"></i> View Paper
+                        </a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="text-center mt-2">
+            <a class="btn btn-outline-secondary" href="{{ site.root.publink }}" target="_blank">
+                <i class="fa fa-book-open mr-2"></i>Full Publication List (NCBI)
+            </a>
+        </div>
+    </div>
+</section>
