@@ -4,7 +4,9 @@ pronouns: he/him
 ---
 year: 2026
 ---
-alumni: false
+alumni: True
+---
+current_position: NIH Postbaccalaureate
 ---
 body: 
 

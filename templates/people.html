@@ -13,7 +13,7 @@
                     <div class='member-title'>
                         <h4>{{ member.title }} </h4>
                         {% if member.pronouns %}
-                        <h6>{{ member.pronouns }}{% endif %}{% if member.year > 2012 %} | Class of {{ member.year }}{% endif %}</h6>
+                        <h6>{{ member.pronouns }}{% endif %}{% if member.current_position and not member.alumni %} | {{ member.current_position }}{% elif member.year > 2012 %} | Class of {{ member.year }}{% endif %}</h6>
                     </div>
                     {{ member.body }}
                     {% if member.project %}
